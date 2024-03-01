@@ -12,8 +12,8 @@ A full-stack web platform for a creator to share recipes, videos, and articles, 
 
 ## Technologies
 
-- **Frontend**: React (without CRA), Webpack, Babel
-- **Backend**: Node.js with Express
+- **Frontend**: Next.js
+- **Backend**: Next.js
 - **Database**: PostgreSQL
 - **Others**: Knex.js for database migrations, Netfily and Heroku for deployment
 
