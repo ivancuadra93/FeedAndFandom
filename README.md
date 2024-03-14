@@ -27,15 +27,29 @@ A full-stack web platform for a creator to share recipes, videos, and articles, 
 ### Installation
 
 1. Clone the repository:
-   ```sh
+   ``` cmd
    git clone https://github.com/ivancuadra93/FeedAndFandom.git
    ```
-2. Install NPM packages for both frontend and backend:
-    ``` sh
-    WIP
+2. Run docker to start up both the server and database containers:
+    ``` cmd
+    docker compose up --build
     ```
-3. Set up the database by configuring PostgreSQL and running the necessary migrations and seeds.
-  - WIP
+    You can run `docker ps` to view the containers that are running.
+   
+4. Set up the database by configuring PostgreSQL and running the necessary migrations and seeds:
+   ``` cmd
+   docker exec <container-id> npx prisma migrate dev
+   docker exec <container-id> npx prisma db seed
+   ```
+
+### Querying the Database
+
+1. You view the database schemas and tables, as well as run queries by using psql:
+   ``` cmd
+   docker exec -it <container-id>  psql -d <db-name>
+   ```
+   
+2. You can also use pgAdmin with host name host.docker.internal and port 5432
   
 ### Running the Application
 
@@ -44,4 +58,3 @@ WIP
 ## Project Structure
 
 WIP
-
